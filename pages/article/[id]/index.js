@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Meta from "../../../components/Meta";
 import Link from "next/Link";
 import { server } from "../../../config";
 
@@ -8,6 +9,7 @@ export default function article({ article }) {
   //   const { id } = router.query;
   return (
     <>
+      <Meta title={article.title} description={article.excerpt} />
       <h1>{article.title}</h1>
       <p>{article.body}</p>
       <br />

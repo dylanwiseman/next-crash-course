@@ -1,14 +1,9 @@
-import Head from "next/head";
 import ArticleList from "../components/ArticleList";
 import { server } from "../config";
 
 export default function Home({ articles }) {
   return (
     <>
-      <Head>
-        <title>WebDev News</title>
-        <meta name="keywords" content="web dev" />
-      </Head>
       <ArticleList articles={articles} />
     </>
   );
